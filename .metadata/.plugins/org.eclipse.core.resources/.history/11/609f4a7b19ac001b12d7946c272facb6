@@ -1,0 +1,34 @@
+Abstratc.BaseCustomerManager'ý içe aktar ;
+Import  Adapters.MernisServiceAdapter ;
+ Concrete.NeroCustomerManager içe aktarýmý ;
+ Concrete.StarbucksCustomerManager içe aktarýmý ;
+ Entities.Customer ithalat ;
+
+public  class  Ana {
+
+	public  static  void  main ( String [] args ) {
+		
+		Müþteri müþteriStarbucks =  yeni  Müþteri ();
+		müþteriStarbucks . setId ( 1 );
+		müþteriStarbucks . setNationalityId ( 10000000000L );
+		müþteriStarbucks . setFirstName ( " Yusuf Enes " );
+		müþteriStarbucks . setLastName ( " Aras " );
+		müþteriStarbucks . setDateOfBirth ( 2000 );
+		
+		BaseCustomerManager baseCustomerManager1 =  new  StarbucksCustomerManager ( yeni  MernisServiceAdapter ());
+		baseCustomerManager1 . Kaydet (customerStarbucks);
+		
+		Müþteri customerNero =  yeni  Müþteri ();
+		müþteriNero . setId ( 1 );
+		müþteriNero . setNationalityId ( 11111111111L );
+		müþteriNero . setFirstName ( " Yusuf Enes " );
+		müþteriNero . setLastName ( " Aras " );
+		müþteriNero . setDateOfBirth ( 2000 );
+		
+		BaseCustomerManager baseCustomerManager2 =  yeni  NeroCustomerManager ( yeni  MernisServiceAdapter ());
+		baseCustomerManager2 . Kaydet (customerNero);
+		
+		
+	}
+
+}

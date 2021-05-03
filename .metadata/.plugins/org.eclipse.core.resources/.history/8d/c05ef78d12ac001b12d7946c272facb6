@@ -1,0 +1,17 @@
+  import Abstract.BaseCustomerManager;
+import Concrete.*;
+import Entities.Customer;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Customer customer = new Customer(1, "Hatice Nur","KAYA", "26Temmuz","12345678915");
+		System.out.println(customer);
+		
+
+	}
+
+}

@@ -1,0 +1,21 @@
+  import Abstract.BaseCustomerManager;
+import Adapters.MernisServiceAdapter;
+import Concrete.*;
+import Entities.Customer;
+import tr.gov.nvi.tckimlik.WS.KPSPublicSoap;
+import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Customer customer = new Customer(1, "Hatice Nur","KAYA", "26Temmuz","12345678915");
+		customerManager.Save(customer);
+		
+		
+
+	}
+
+}
